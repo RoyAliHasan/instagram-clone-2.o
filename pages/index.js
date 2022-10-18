@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Feeds from "../components/Feeds";
+import Header from "../components/Header";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
       <Header />
 
       {/* feed */}
-
+      <Feeds />
       {/* modal */}
     </div>
-  )
+  );
 }

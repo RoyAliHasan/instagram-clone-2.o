@@ -1,11 +1,18 @@
 import Image from "next/image";
 import React from "react";
-import { SearchIcon } from "@heroicons/react/outline";
+import {
+  HeartIcon,
+  MenuIcon,
+  PaperAirplaneIcon,
+  PlusCircleIcon,
+  SearchIcon,
+  UserGroupIcon,
+} from "@heroicons/react/outline";
 import { HomeIcon } from "@heroicons/react/solid";
 
 function Header() {
   return (
-    <div>
+    <div className="shadow-sm border-b bg-white sticky z-50">
       <div className="flex justify-between max-w-6xl mx-5 xl:mx-auto">
         {/* left */}
         <div className="relative hidden lg:inline-grid  w-24 cursor-pointer">
@@ -38,7 +45,26 @@ function Header() {
         </div>
 
         {/* right */}
-        <HomeIcon className="h-10 w-10" />
+
+        <div className="flex items-center justify-end space-x-4">
+          <HomeIcon className="navBtn" />
+          <MenuIcon className="h-6 md:hidden cursor-pointer" />
+
+          <div className="relative navBtn ">
+            <PaperAirplaneIcon className="navBtn rotate-45" />
+            <div className="absolute -top-1 -right-2 text-xs bg-red-500 w-5 h-5 rounded-full flex items-center justify-center animate-pulse text-white ">
+              30
+            </div>
+          </div>
+          <PlusCircleIcon className="navBtn" />
+          <UserGroupIcon className="navBtn" />
+          <HeartIcon className="navBtn" />
+
+          <img
+            src="/avatar.jpeg"
+            className="h-10 w-10 cursor-pointer rounded-full"
+          />
+        </div>
       </div>
     </div>
   );
